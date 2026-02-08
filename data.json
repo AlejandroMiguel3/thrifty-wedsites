@@ -11,21 +11,36 @@
     "status": "Payment Review",
     "gcash_reference": "",
     "created_at": "2026-02-08 06:08:52",
+    "favicon": "",
     "bride_first_name": "Bride Fname",
     "bride_middle_name": "Bride Mname",
     "bride_last_name": "Bride Lname",
     "groom_first_name": "Groom Fname",
     "groom_middle_name": "Groom Mname",
     "groom_last_name": "Groom Lname",
+    "initials": "C & M",
     "wedding_date": "2026-02-14",
     "wedding_time": "12:00",
+    "wedding_venue": "The Hillside Garden, Tagaytay City, Cavite",
+    "city": "Tagaytay",
     "banner_photos": [
         {
             "attachment_id": 322,
             "url": "http://thriftywedsites2.local/wp-content/uploads/2026/02/banner.png"
         }
     ],
-    "love_story": "Love Story Desc",
+    "love_story": {
+        "content": "",
+        "img": ""
+    },
+    "firstEncounter": {
+        "content": "",
+        "img": ""
+    },
+    "proposal": {
+        "content": "",
+        "img": ""
+    },
     "event_details": [
         {
             "title": "Event Details 1",
@@ -110,9 +125,13 @@
             "name": "Maid of Honor 1"
         }
     ],
+    "attire_ladies": "",
+    "attire_gentlemen": "",
+    "attire_colors": ["#F7E7CE", "#BCB88A", "#E0D5C1", "#D4AF37"],
     "order_of_events": [
         {
             "title": "Order of Events 1",
+            "time": "10:00 AM",
             "description": "Order of Events Description 1",
             "file": "slide-lcp-opti.jpg",
             "photo": "http://thriftywedsites2.local/wp-content/uploads/2026/02/slide-lcp-opti-1.jpg",
@@ -133,14 +152,20 @@
     ],
     "registry_items": [
         {
+            "attachment_id": 321,
             "title": "GR 1",
             "description": "GR Description 1",
             "file": "iStock-671132506-min-opti.jpg",
             "photo": "http://thriftywedsites2.local/wp-content/uploads/2026/02/iStock-671132506-min-opti-2.jpg",
-            "attachment_id": 321
+            "method": "GCash / Digital Bank",
+            "accountNumber": "0917 123 4567",
+            "accountHolder": "Michael R.",
+            "link": "#",
+            "label": "Visit Registry"
         }
     ],
     "maps_link": "http://Gmaps",
+    "hashtag": "#hashtag",
     "order_logs": [
         {
             "status": "Pending",

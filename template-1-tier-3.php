@@ -122,7 +122,7 @@ if (!empty($orders)) {
     .story-v-line { width: 1px; height: 60px; background: linear-gradient(to bottom, transparent, var(--primary), transparent); margin: 0 auto 2rem; opacity: 0.3; }
     @media (min-width: 768px) { .story-v-line { height: 80px; margin-bottom: 3rem; } }
 
-    .divider-ornament { display: flex; align-items: center; justify-content: center; gap: 1rem; margin: 1.5rem 0; }
+    .divider-ornament { display: flex; align-items: center; gap: 1rem; margin: 1.5rem 0; }
     @media (min-width: 768px) { .divider-ornament { gap: 1.5rem; margin: 2rem 0; } }
     .divider-ornament span { width: 30px; height: 1px; background: var(--primary); opacity: 0.3; }
     @media (min-width: 768px) { .divider-ornament span { width: 40px; } }
@@ -395,7 +395,7 @@ if (!empty($orders)) {
           <h2 class="font-serif-luxury text-3xl sm:text-4xl mb-4 text-primary">The Venue</h2>
           <p class="font-serif-classic text-xl sm:text-2xl mb-2 dyn-venue-name"></p>
           <p class="text-[8px] sm:text-[10px] tracking-[0.3em] uppercase opacity-40 mb-6 sm:mb-8 dyn-venue-location"></p>
-          <a href="https://maps.google.com" target="_blank" class="btn-luxury inline-block px-10 sm:px-12 py-4 bg-primary text-white text-[9px] sm:text-[10px] tracking-[0.4em] uppercase hover:bg-stone-900">Open in Maps</a>
+          <a href="#" target="_blank" class="btn-luxury inline-block px-10 sm:px-12 py-4 bg-primary text-white text-[9px] sm:text-[10px] tracking-[0.4em] uppercase hover:bg-stone-900 dyn-maps-link">Open in Maps</a>
         </div>
       </div>
     </section>
@@ -405,10 +405,7 @@ if (!empty($orders)) {
       <div class="max-w-2xl mx-auto bg-stone-50 p-10 sm:p-16 md:p-20 shadow-2xl border-t-4 border-primary reveal text-center rounded-b-xl">
         <h2 class="font-serif-luxury text-4xl sm:text-5xl mb-6">RSVP</h2>
         <p class="mb-8 sm:mb-10 text-[9px] sm:text-[10px] opacity-40 tracking-[0.4em] sm:tracking-[0.5em] uppercase">KINDLY RESPOND BY JANUARY 1, 2027</p>
-        <form class="space-y-6 sm:space-y-8" onsubmit="event.preventDefault(); alert('Salamat! Your response has been saved.');">
-          <input type="text" placeholder="FULL NAME" class="w-full bg-transparent border-b border-stone-200 py-3 sm:py-4 text-[10px] tracking-widest focus:border-primary outline-none uppercase transition-all" required>
-          <button type="submit" class="btn-luxury w-full bg-primary text-white py-4 sm:py-5 text-[10px] tracking-[0.5em] uppercase hover:bg-stone-900">Confirm Attendance</button>
-        </form>
+        <a href="#" target="_blank" rel="noopener" class="btn-luxury w-full inline-block bg-primary text-white py-4 sm:py-5 text-[10px] tracking-[0.5em] uppercase hover:bg-stone-900 dyn-rsvp-link">RSVP Here</a>
       </div>
     </section>
 
@@ -421,13 +418,13 @@ if (!empty($orders)) {
   <script type="module">
     const CONFIG = {
       "favicon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.85em' font-size='70' fill='%23D4AF37' font-family='serif' font-weight='bold'%3EC%3C/text%3E%3Ctext x='35' y='1.1em' font-size='40' fill='%23D4AF37' font-family='serif' opacity='0.6'%3E%26%3C/text%3E%3Ctext x='55' y='0.85em' font-size='70' fill='%23D4AF37' font-family='serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E",
-      "date": "2027-02-14T10:00:00",
-      "place": "TAGAYTAY",
-      "placeFull": "The Hillside Garden, Tagaytay City, Cavite",
-      "bridesName": "Catie",
-      "groomName": "Michael",
+      "wedding_date": "2027-02-14T10:00:00",
+      "city": "TAGAYTAY",
+      "wedding_venue": "The Hillside Garden, Tagaytay City, Cavite",
+      "bride_first_name": "Catie",
+      "groom_first_name": "Michael",
       "initials": "C & M",
-      "firstEncounter": {
+      "first_encounter": {
         "content": "In the quiet corners of an old library, a single glance became a lifetime of shared stories. A chance meeting that blossomed into a beautiful friendship, and eventually, a promise that would last through the ages.",
         "img": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200"
       },
@@ -435,38 +432,42 @@ if (!empty($orders)) {
         "content": "Beneath the vast, starlit canopy of the Tagaytay sky, amidst the cool evening breeze, he asked the question that resonated in the depths of their souls. It was a moment of pure magic, marking the beginning of their eternal unity.",
         "img": "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=1200"
       },
-      "attireLadies": "We recommend elegant gowns in shades of <span class='text-primary font-bold'>Champagne</span>, <span class='text-primary font-bold'>Sage Green</span>, or Earth tones. Please avoid wearing white or ivory.",
-      "attireGentlemen": "Traditional <span class='text-primary font-bold'>Barong Tagalog</span> or a clean-cut <span class='text-primary font-bold'>Dark Suit</span>. Formal leather shoes are highly encouraged.",
-      "attireColors": ["#F7E7CE", "#BCB88A", "#E0D5C1", "#D4AF37"],
-      "principalSponsors": ["Mr. & Mrs. Antonio Dela Cruz", "Mr. & Mrs. Roberto Santos"],
-      "entourage": [
-        { "name": "John Benedict Doe", "role": "Best Man" },
-        { "name": "Ma. Jane Isabella Smith", "role": "Maid of Honor" },
-        { "name": "David Christopher Lim", "role": "Groomsman" },
-        { "name": "Sofia Maria Reyes", "role": "Bridesmaid" }
+      "attire_ladies": "We recommend elegant gowns in shades of <span class='text-primary font-bold'>Champagne</span>, <span class='text-primary font-bold'>Sage Green</span>, or Earth tones. Please avoid wearing white or ivory.",
+      "attire_gentlemen": "Traditional <span class='text-primary font-bold'>Barong Tagalog</span> or a clean-cut <span class='text-primary font-bold'>Dark Suit</span>. Formal leather shoes are highly encouraged.",
+      "attire_colors": ["#F7E7CE", "#BCB88A", "#E0D5C1", "#D4AF37"],
+      "principal_sponsors": ["Mr. & Mrs. Antonio Dela Cruz", "Mr. & Mrs. Roberto Santos"],
+      "best_man": "John Benedict Doe",
+      "maid_of_honor": "Ma. Jane Isabella Smith",
+      "groomsmen": [
+        "David Christopher Lim"
       ],
-      "spotifyLink": "https://open.spotify.com/embed/playlist/49wHubftRzuuq6KbAEcsLt",
-      "orderOfEvents": [
-        { "time": "10:00 AM", "event": "Processional", "description": "The elegant arrival of the wedding party and our beloved guests." },
-        { "time": "10:30 AM", "event": "Holy Matrimony", "description": "A sacred exchange of vows and rings as we become one." },
-        { "time": "12:00 PM", "event": "Cocktail Hour", "description": "Light refreshments and joyous captures under the Tagaytay sun." },
-        { "time": "01:30 PM", "event": "Reception & Feast", "description": "A grand celebration of love with dining, toasts, and dancing." }
+      "bridesmaids": [
+        "Sofia Maria Reyes"
       ],
-      "gallery": [
-        "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800",
-        "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800",
-        "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=800",
-        "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800",
-        "https://images.unsplash.com/photo-1519225497282-1034d440056a?q=80&w=800",
-        "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=800"
+      "soundtrack_link": "https://open.spotify.com/embed/playlist/49wHubftRzuuq6KbAEcsLt",
+      "order_of_events": [
+        { "time": "10:00 AM", "title": "Processional", "description": "The elegant arrival of the wedding party and our beloved guests." },
+        { "time": "10:30 AM", "title": "Holy Matrimony", "description": "A sacred exchange of vows and rings as we become one." },
+        { "time": "12:00 PM", "title": "Cocktail Hour", "description": "Light refreshments and joyous captures under the Tagaytay sun." },
+        { "time": "01:30 PM", "title": "Reception & Feast", "description": "A grand celebration of love with dining, toasts, and dancing." }
       ],
-      "registry": {
+      "prenup_photos": [
+        { "url": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800" },
+        { "url": "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800" },
+        { "url": "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=800" },
+        { "url": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800" },
+        { "url": "https://images.unsplash.com/photo-1519225497282-1034d440056a?q=80&w=800" },
+        { "url": "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=800" }
+      ],
+      "registry_items": {
         "method": "GCash / Digital Bank",
         "accountNumber": "0917 123 4567",
         "accountHolder": "Michael R.",
         "link": "#",
         "label": "Visit Registry"
       },
+      "rsvp_link": "#",
+      "maps_link": "https://maps.app.goo.gl/UeNWecveaQrncVmF9",
       "hashtag": "#CatieAndMichael2027"
     };
 
@@ -599,36 +600,47 @@ if (!empty($orders)) {
         faviconEl.href = data.favicon;
       }
 
-      const fullNames = `${data.bridesName} & ${data.groomName}`;
+      const fullNames = `${data.bride_first_name} & ${data.groom_first_name}`;
       document.querySelectorAll('.dyn-names').forEach(el => el.textContent = fullNames);
       document.querySelectorAll('.dyn-initials').forEach(el => el.textContent = data.initials);
       document.querySelectorAll('.dyn-hashtag').forEach(el => el.textContent = data.hashtag);
       
-      const dateObj = new Date(data.date);
+      const dateObj = new Date(data.wedding_date);
       const formattedDate = dateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).toUpperCase();
       const tagalogDate = `Ika-${dateObj.getDate()} ng Pebrero ${dateObj.getFullYear()}`;
       
       document.querySelector('.dyn-loader-date').textContent = tagalogDate;
-      document.querySelectorAll('.dyn-hero-detail').forEach(el => el.textContent = `${formattedDate} • ${data.place}`);
+      document.querySelectorAll('.dyn-hero-detail').forEach(el => el.textContent = `${formattedDate} • ${data.city}`);
       
-      document.querySelector('.dyn-attire-ladies').innerHTML = data.attireLadies;
-      document.querySelector('.dyn-attire-gentlemen').innerHTML = data.attireGentlemen;
-      document.querySelector('.dyn-venue-name').textContent = data.place;
-      document.querySelector('.dyn-venue-location').textContent = data.placeFull;
+      document.querySelector('.dyn-attire-ladies').innerHTML = data.attire_ladies;
+      document.querySelector('.dyn-attire-gentlemen').innerHTML = data.attire_gentlemen;
+      document.querySelector('.dyn-venue-name').textContent = data.wedding_venue;
+      document.querySelector('.dyn-venue-location').textContent = data.city;
+      const rsvpLink = document.querySelector('.dyn-rsvp-link');
+      if (rsvpLink && data.rsvp_link) rsvpLink.href = data.rsvp_link;
+      const mapsLink = document.querySelector('.dyn-maps-link');
+      if (mapsLink && data.maps_link) mapsLink.href = data.maps_link;
       
       const attireColorsEl = document.getElementById('attire-colors');
-      if (attireColorsEl) attireColorsEl.innerHTML = data.attireColors.map(color => `<div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-inner border-2 border-white" style="background-color: ${color}"></div>`).join('');
+      if (attireColorsEl) attireColorsEl.innerHTML = data.attire_colors.map(color => `<div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-inner border-2 border-white" style="background-color: ${color}"></div>`).join('');
       
       const sponsorsP = document.getElementById('principal-sponsors');
       const sponsorsS = document.getElementById('secondary-sponsors');
-      if (sponsorsP) sponsorsP.innerHTML = data.principalSponsors.map(s => `<div class="reveal">${s}</div>`).join('');
-      if (sponsorsS) sponsorsS.innerHTML = data.entourage.map(s => `<div class="reveal"><p class="font-bold mb-1">${s.name}</p><p class="text-[8px] uppercase tracking-widest opacity-40">${s.role}</p></div>`).join('');
+      if (sponsorsP) sponsorsP.innerHTML = data.principal_sponsors.map(s => `<div class="reveal">${s}</div>`).join('');
+      if (sponsorsS) {
+        const entourageCards = [];
+        if (data.best_man) entourageCards.push({ name: data.best_man, role: 'Best Man' });
+        if (data.maid_of_honor) entourageCards.push({ name: data.maid_of_honor, role: 'Maid of Honor' });
+        (data.groomsmen || []).forEach(name => entourageCards.push({ name, role: 'Groomsman' }));
+        (data.bridesmaids || []).forEach(name => entourageCards.push({ name, role: 'Bridesmaid' }));
+        sponsorsS.innerHTML = entourageCards.map(s => `<div class="reveal"><p class="font-bold mb-1">${s.name}</p><p class="text-[8px] uppercase tracking-widest opacity-40">${s.role}</p></div>`).join('');
+      }
       
       const spotifyContainer = document.getElementById('spotify-container');
-      if (spotifyContainer) spotifyContainer.innerHTML = `<iframe style="border-radius:12px" src="${data.spotifyLink}" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+      if (spotifyContainer) spotifyContainer.innerHTML = `<iframe style="border-radius:12px" src="${data.soundtrack_link}" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
       
       const scheduleEl = document.getElementById('schedule-container');
-      if (scheduleEl) scheduleEl.innerHTML = data.orderOfEvents.map((e, i) => `
+      if (scheduleEl) scheduleEl.innerHTML = data.order_of_events.map((e, i) => `
         <div class="relative flex flex-col md:flex-row items-start reveal group py-10 ${i % 2 !== 0 ? 'md:flex-row-reverse' : ''}">
           <div class="timeline-nexus">
             <div class="nexus-outer"></div>
@@ -640,8 +652,7 @@ if (!empty($orders)) {
                <span class="font-serif-luxury text-xs tracking-[0.4em] text-primary uppercase">${e.time}</span>
                <i class="w-1 h-1 rounded-full bg-primary/30"></i>
             </div>
-            <h4 class="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-2 leading-tight group-hover:text-primary transition-colors">${e.event}</h4>
-            <div class="divider-ornament opacity-20 transform scale-75 ${i % 2 === 0 ? 'md:justify-end' : 'md:justify-start'} -mt-1 mb-3"><span></span><i>✧</i><span></span></div>
+            <h4 class="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-2 leading-tight group-hover:text-primary transition-colors">${e.title}</h4>
             <p class="font-serif-classic text-base sm:text-lg italic opacity-60 leading-relaxed max-w-lg ${i % 2 === 0 ? 'md:ml-auto' : ''}">${e.description}</p>
           </div>
           <div class="hidden md:block md:w-1/2"></div>
@@ -650,7 +661,7 @@ if (!empty($orders)) {
       const storyEl = document.getElementById('story-container');
       if (storyEl) {
         const storyParts = [
-          { ...data.firstEncounter, title: "The First Encounter", tagalog: "Ang Unang Pagkikita" },
+          { ...data.first_encounter, title: "The First Encounter", tagalog: "Ang Unang Pagkikita" },
           { ...data.proposal, title: "The Proposal", tagalog: "Ang Pag-aalok" }
         ];
         storyEl.innerHTML = storyParts.map((s, i) => {
@@ -667,24 +678,24 @@ if (!empty($orders)) {
       }
       
       const galleryEl = document.getElementById('masonry-container');
-      if (galleryEl) galleryEl.innerHTML = data.gallery.map(img => `<div class="masonry-item reveal"><img src="${img}" loading="lazy"></div>`).join('');
+      if (galleryEl) galleryEl.innerHTML = (data.prenup_photos || []).map(photo => `<div class="masonry-item reveal"><img src="${photo.url}" loading="lazy"></div>`).join('');
       
       const registryEl = document.getElementById('registry-container');
       if (registryEl) registryEl.innerHTML = `
         <div class="p-8 sm:p-10 border border-stone-100 bg-white shadow-sm rounded-xl flex-1 hover:shadow-md transition-shadow">
-          <p class="text-[9px] tracking-widest uppercase opacity-40 mb-3">${data.registry.method}</p>
-          <p class="font-serif-luxury text-xl sm:text-2xl mb-1">${data.registry.accountNumber}</p>
-          <p class="text-[10px] uppercase tracking-widest opacity-60">${data.registry.accountHolder}</p>
+          <p class="text-[9px] tracking-widest uppercase opacity-40 mb-3">${data.registry_items.method}</p>
+          <p class="font-serif-luxury text-xl sm:text-2xl mb-1">${data.registry_items.accountNumber}</p>
+          <p class="text-[10px] uppercase tracking-widest opacity-60">${data.registry_items.accountHolder}</p>
         </div>
         <div class="p-8 sm:p-10 border border-stone-100 bg-white shadow-sm rounded-xl flex-1 hover:shadow-md transition-shadow flex flex-col justify-center">
           <p class="text-[9px] tracking-widest uppercase opacity-40 mb-3">Registry List</p>
-          <a href="${data.registry.link}" class="font-serif-luxury text-xl sm:text-2xl underline decoration-primary underline-offset-8">${data.registry.label}</a>
+          <a href="${data.registry_items.link}" class="font-serif-luxury text-xl sm:text-2xl underline decoration-primary underline-offset-8">${data.registry_items.label}</a>
         </div>`;
     }
 
     async function initApp() { 
       renderDynamic(CONFIG); 
-      initCountdown(CONFIG.date); 
+      initCountdown(CONFIG.wedding_date); 
       initMobileNav();
       startLoadingSequence(); 
     }
