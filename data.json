@@ -11,6 +11,7 @@
     "status": "Payment Review",
     "gcash_reference": "",
     "created_at": "2026-02-08 06:08:52",
+    // Use thriftywed logo as favicon (Change upon request by client)
     "favicon": "",
     "bride_first_name": "Bride Fname",
     "bride_middle_name": "Bride Mname",
@@ -18,29 +19,27 @@
     "groom_first_name": "Groom Fname",
     "groom_middle_name": "Groom Mname",
     "groom_last_name": "Groom Lname",
+    // Use JS to get the intials
     "initials": "C & M",
     "wedding_date": "2026-02-14",
     "wedding_time": "12:00",
-    "wedding_venue": "The Hillside Garden, Tagaytay City, Cavite",
-    "city": "Tagaytay",
+    // Need to add in backend field: wedding_venue
+    "wedding_address": "The Hillside Garden, Tagaytay City, Cavite",
+    "general_location": "Tagaytay",
     "banner_photos": [
         {
             "attachment_id": 322,
             "url": "http://thriftywedsites2.local/wp-content/uploads/2026/02/banner.png"
         }
     ],
-    "love_story": {
-        "content": "",
-        "img": ""
-    },
-    "firstEncounter": {
-        "content": "",
-        "img": ""
-    },
-    "proposal": {
-        "content": "",
-        "img": ""
-    },
+    "love_story": [
+        // Love story, first encounter, proposal
+        {
+            "title": "",
+            "description": "",
+            "img": ""
+        }
+    ],
     "event_details": [
         {
             "title": "Event Details 1",
@@ -135,6 +134,7 @@
     "ladies_clothing_6": "",
     "gentlemen_clothing_intro": "Barong Tagalog or Suit",
     "gentlemen_clothing_notes": "Traditional Barong Tagalog or a clean-cut Dark Suit. Formal leather shoes are highly encouraged.",
+    // For specific attire
     "gentleman_clothing_1": "",
     "gentleman_clothing_2": "",
     "gentleman_clothing_3": "",
@@ -148,6 +148,7 @@
     "attire_colors_5": "",
     "attire_colors_6": "",
     "order_of_events": [
+        // Need to add in backend field: Time
         {
             "title": "Order of Events 1",
             "time": "10:00 AM",
@@ -171,19 +172,23 @@
     ],
     "registry_items": [
         {
-            "attachment_id": 321,
             "title": "GR 1",
             "description": "GR Description 1",
-            "file": "iStock-671132506-min-opti.jpg",
             "photo": "http://thriftywedsites2.local/wp-content/uploads/2026/02/iStock-671132506-min-opti-2.jpg",
-            "method": "GCash / Digital Bank",
-            "accountNumber": "0917 123 4567",
-            "accountHolder": "Michael R.",
-            "link": "#",
-            "label": "Visit Registry"
+            "attachment_id": 321,
+            "link": "#", //link to shopee or lazada (Optional)
+        }
+    ],
+    // Apply this new variable to the template
+    "registry_qrs": [
+        {
+            "title": "Gcash",
+            "photo": "http://thriftywedsites2.local/wp-content/uploads/2026/02/iStock-671132506-min-opti-2.jpg",
+            "attachment_id": 321
         }
     ],
     "maps_link": "http://Gmaps",
+    // Need to add in backend field: hashtag
     "hashtag": "#hashtag",
     "order_logs": [
         {
