@@ -389,11 +389,11 @@ if (!empty($orders)) {
     </section>
 
     <section id="registry" class="py-16 sm:py-24 px-6 text-center">
-      <div class="max-w-2xl mx-auto reveal">
+      <div class="max-w-6xl mx-auto reveal">
         <span class="text-[10px] uppercase tracking-[0.6em] opacity-40 block mb-4">Pasasalamat</span>
         <h2 class="font-serif-luxury text-4xl sm:text-6xl text-primary mb-6">Gift Registry</h2>
         <p class="font-serif-classic text-lg sm:text-xl opacity-70 mb-10 sm:mb-12 leading-relaxed">Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, a contribution towards our future home would be warmly appreciated.</p>
-        <div id="registry-container" class="flex flex-col md:flex-row justify-center gap-6 sm:gap-8"></div>
+        <div id="registry-container" class="flex flex-col items-center gap-6 sm:gap-8"></div>
       </div>
     </section>
 
@@ -405,7 +405,6 @@ if (!empty($orders)) {
         <div class="bg-white p-8 sm:p-12 md:p-14 shadow-2xl rounded-2xl max-w-md text-center reveal border border-stone-50">
           <h2 class="font-serif-luxury text-3xl sm:text-4xl mb-4 text-primary">The Venue</h2>
           <p class="font-serif-classic text-xl sm:text-2xl mb-2 dyn-venue-name"></p>
-          <p class="text-[8px] sm:text-[10px] tracking-[0.3em] uppercase opacity-40 mb-6 sm:mb-8 dyn-venue-location"></p>
           <a href="#" target="_blank" class="btn-luxury inline-block px-10 sm:px-12 py-4 bg-primary text-white text-[9px] sm:text-[10px] tracking-[0.4em] uppercase hover:bg-stone-900 dyn-maps-link">Open in Maps</a>
         </div>
       </div>
@@ -453,26 +452,30 @@ if (!empty($orders)) {
         "reference_id": "TWS-20261225-PREMIUM",
         "bride_first_name": "Catie",
         "groom_first_name": "Michael",
-        "initials": "C & M",
         "wedding_date": "2026-12-25",
         "wedding_time": "15:00",
-        "wedding_venue": "The Hillside Garden, Tagaytay City, Cavite",
-        "city": "Tagaytay",
+        "wedding_address": "The Hillside Garden, Tagaytay City, Cavite",
+        "general_location": "Tagaytay",
         "banner_photos": [
             { "url": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200" }
         ],
-        "love_story": {
-            "content": "Five years of adventures, from hiking the Pacific Northwest to quiet evenings cooking together. We found a partner in each other who understands the silence as much as the laughter. Every day is a new chapter in a book we never want to put down.",
-            "img": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200"
-        },
-        "firstEncounter": {
-            "content": "It began on a rainy Tuesday afternoon at a small bookstore in Seattle. We both reached for the same tattered copy of 'The Great Gatsby'. That brief moment turned into a three-hour conversation over coffee, and we've been inseparable ever since.",
-            "img": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800"
-        },
-        "proposal": {
-            "content": "On a crisp autumn morning at sunrise, Michael led Catie to the summit of Mount Rainier. As the first rays of light hit the snow-capped peak, he got down on one knee. Through tears of joy, the only answer was 'Yes'.",
-            "img": "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=1200"
-        },
+        "love_story": [
+            {
+                "title": "The Love Story",
+                "description": "Five years of adventures, from hiking the Pacific Northwest to quiet evenings cooking together. We found a partner in each other who understands the silence as much as the laughter. Every day is a new chapter in a book we never want to put down.",
+                "img": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200"
+            },
+            {
+                "title": "First Encounter",
+                "description": "It began on a rainy Tuesday afternoon at a small bookstore in Seattle. We both reached for the same tattered copy of 'The Great Gatsby'. That brief moment turned into a three-hour conversation over coffee, and we've been inseparable ever since.",
+                "img": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800"
+            },
+            {
+                "title": "Proposal",
+                "description": "On a crisp autumn morning at sunrise, Michael led Catie to the summit of Mount Rainier. As the first rays of light hit the snow-capped peak, he got down on one knee. Through tears of joy, the only answer was 'Yes'.",
+                "img": "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=1200"
+            }
+        ],
         "principal_sponsors": [
             { "name": "General & Mrs. Antonio Dela Cruz" },
             { "name": "Governor & Mrs. Roberto Santos" },
@@ -519,10 +522,37 @@ if (!empty($orders)) {
         ],
         "registry_items": [
             {
-                "method": "GCash / Digital Fund",
-                "accountNumber": "0917 123 4567",
-                "accountHolder": "Michael Anderson",
-                "label": "Contribute to Our Future Home"
+                "title": "Premium Cookware Set",
+                "description": "A high-quality 10-piece non-stick cookware set to help us start our culinary journey together in our new kitchen.",
+                "photo": "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?q=80&w=800",
+                "attachment_id": 321,
+                "link": "#"
+            },
+            {
+                "title": "Deerma DX Series Vacuum",
+                "description": "Powerful handheld vacuum cleaner with 1.2L dust capacity and lightweight design. Perfect for keeping our new home spotless with minimal effort.",
+                "photo": "https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=800",
+                "attachment_id": 322,
+                "link": "https://shopee.ph/Deerma-DX-Series-Handheld-Vacuum-Cleaner-Powerful-Suction-Low-Noise-1.2L-Dust-Capacity-3.3kg-Lightweight-DX115C-DX118C-Blue-Black-i.330250330.5860826373?extraParams=%7B%22display_model_id%22%3A54700782249%2C%22model_selection_logic%22%3A3%7D&rModelId=54700782249&sp_atk=0d0c2b74-b7f2-4659-a838-8cb257a6b57e&vItemId=56700166416&vModelId=430014524657&vShopId=1257811163&xptdk=0d0c2b74-b7f2-4659-a838-8cb257a6b57e"
+            },
+            {
+                "title": "Smart Home Hub",
+                "description": "A central hub to connect our home devices, helping us stay organized and connected as we build our life together.",
+                "photo": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800",
+                "attachment_id": 323,
+                "link": "#"
+            }
+        ],
+        "registry_qrs": [
+            {
+                "title": "Gcash",
+                "photo": "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=GCash-Demo-Payment",
+                "attachment_id": 321
+            },
+            {
+                "title": "Maya",
+                "photo": "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=Maya-Demo-Payment",
+                "attachment_id": 322
             }
         ]
     };
@@ -565,8 +595,9 @@ if (!empty($orders)) {
     function renderDynamic(data) {
       try {
         const fullNames = `${data.bride_first_name || ""} & ${data.groom_first_name || ""}`;
+        const initials = `${data.bride_first_name?.charAt(0) || ""} & ${data.groom_first_name?.charAt(0) || ""}`;
         document.querySelectorAll('.dyn-names').forEach(el => el.textContent = fullNames);
-        document.querySelectorAll('.dyn-initials').forEach(el => el.textContent = data.initials || "");
+        document.querySelectorAll('.dyn-initials').forEach(el => el.textContent = initials);
         document.querySelectorAll('.dyn-hashtag').forEach(el => el.textContent = data.hashtag || "");
         
         const dateObj = new Date(data.wedding_date);
@@ -575,26 +606,19 @@ if (!empty($orders)) {
         
         const loaderDate = document.querySelector('.dyn-loader-date');
         if (loaderDate) loaderDate.textContent = tagalogDate;
-        document.querySelectorAll('.dyn-hero-detail').forEach(el => el.textContent = `${formattedDate} • ${data.city || ""}`);
+        document.querySelectorAll('.dyn-hero-detail').forEach(el => el.textContent = `${formattedDate} • ${data.general_location || ""}`);
         
-        const hasStory = (data.love_story?.content?.trim()) || (data.firstEncounter?.content?.trim()) || (data.proposal?.content?.trim());
+        const hasStory = (data.love_story || []).some(s => s.description?.trim());
         toggleSection('#story', hasStory);
 
         const storyCont = document.getElementById('story-container');
         if (storyCont) {
-            const parts = [
-                { ...(data.love_story || {}), title: "The Love Story", tag: "Ang Kwento ng Pag-ibig" },
-                { ...(data.firstEncounter || {}), title: "The First Encounter", tag: "Ang Unang Pagkikita" },
-                { ...(data.proposal || {}), title: "The Proposal", tag: "Ang Pag-aalok" }
-            ].filter(p => p.content && p.content.trim() !== "");
-
-            storyCont.innerHTML = parts.map((s, i) => {
-                const first = s.content.charAt(0);
-                const rest = s.content.slice(1);
+            storyCont.innerHTML = (data.love_story || []).filter(s => s.description?.trim()).map((s, i) => {
+                const first = s.description.charAt(0);
+                const rest = s.description.slice(1);
                 return `<div class="flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-10 sm:gap-16 items-center reveal">
-                    <div class="w-full md:w-1/2 flex justify-center"><div class="premium-image-wrapper"><div class="floating-frame"></div><div class="image-container aspect-[4/5]"><img src="${s.img || s.photo || ""}" class="w-full h-full object-cover transition-transform duration-[4s] hover:scale-110"></div></div></div>
+                    <div class="w-full md:w-1/2 flex justify-center"><div class="premium-image-wrapper"><div class="floating-frame"></div><div class="image-container aspect-[4/5]"><img src="${s.img || ""}" class="w-full h-full object-cover transition-transform duration-[4s] hover:scale-110"></div></div></div>
                     <div class="w-full md:w-1/2 text-center ${i % 2 === 0 ? 'md:text-left' : 'md:text-right'} max-w-xl">
-                        <span class="text-[9px] uppercase tracking-[0.6em] text-primary opacity-60 mb-3 sm:mb-4 block font-serif-luxury">${s.tag}</span>
                         <h3 class="font-serif-luxury text-3xl sm:text-5xl text-stone-900 font-bold mb-4 sm:mb-6 leading-tight">${s.title}</h3>
                         <div class="divider-ornament ${i % 2 === 0 ? 'md:justify-start' : 'md:justify-end'}"><span></span><i>✧</i><span></span></div>
                         <p class="font-serif-classic text-xl sm:text-2xl italic opacity-70 leading-relaxed text-stone-700"><span class="editorial-cap">${first}</span>${rest}</p>
@@ -673,21 +697,51 @@ if (!empty($orders)) {
         const galleryCont = document.getElementById('masonry-container');
         if (galleryCont) galleryCont.innerHTML = (data.prenup_photos || []).filter(p => p.url).map(p => `<div class="masonry-item reveal"><img src="${p.url}" loading="lazy"></div>`).join('');
         
-        const validRegistry = (data.registry_items || []).filter(r => (r.method?.trim()) || (r.accountNumber?.trim()));
-        toggleSection('#registry', validRegistry.length > 0);
+        const validRegistry = (data.registry_items || []).filter(r => r.title?.trim());
+        const validQRs = (data.registry_qrs || []).filter(q => q.title?.trim());
+        toggleSection('#registry', validRegistry.length > 0 || validQRs.length > 0);
+        
         const registryCont = document.getElementById('registry-container');
         if (registryCont) {
-          registryCont.innerHTML = validRegistry.map(r => `
-            <div class="p-8 sm:p-10 border border-stone-100 bg-white shadow-sm rounded-xl flex-1 hover:shadow-md transition-shadow">
-              <p class="text-[9px] tracking-widest uppercase opacity-40 mb-3">${r.method || ""}</p>
-              <p class="font-serif-luxury text-xl sm:text-2xl mb-1">${r.accountNumber || ""}</p>
-              <p class="text-[10px] uppercase tracking-widest opacity-60">${r.accountHolder || ""}</p>
-              ${r.link && r.link !== "#" ? `<a href="${r.link}" class="mt-4 inline-block font-serif-luxury text-xs text-primary underline decoration-primary underline-offset-8">${r.label || "Visit"}</a>` : ""}
-            </div>`).join('');
+          let html = '';
+          
+          if (validRegistry.length > 0) {
+            html += `<div class="w-full mb-12">
+              <h3 class="font-serif-luxury text-2xl mb-8 opacity-40 uppercase tracking-widest">Wishlist</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+                ${validRegistry.map(r => `
+                  <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-all text-center flex flex-col items-center">
+                    ${r.photo ? `<div class="aspect-video mb-4 overflow-hidden rounded-lg w-full"><img src="${r.photo}" class="w-full h-full object-cover"></div>` : ''}
+                    <h4 class="font-serif-luxury text-xl mb-2">${r.title}</h4>
+                    <p class="font-serif-classic text-sm opacity-60 mb-4 flex-grow">${r.description || ""}</p>
+                    ${r.link && r.link !== "#" ? `<a href="${r.link}" target="_blank" class="text-primary text-[10px] uppercase tracking-widest font-bold hover:underline">View Item</a>` : ''}
+                  </div>
+                `).join('')}
+              </div>
+            </div>`;
+          }
+          
+          if (validQRs.length > 0) {
+            html += `<div class="w-full">
+              <h3 class="font-serif-luxury text-2xl mb-8 opacity-40 uppercase tracking-widest">Monetary Gifts</h3>
+              <div class="flex flex-wrap justify-center gap-8">
+                ${validQRs.map(q => `
+                  <div class="text-center">
+                    <div class="w-48 h-48 bg-white p-4 rounded-xl shadow-md mb-4 mx-auto border border-stone-100">
+                      <img src="${q.photo}" class="w-full h-full object-contain" alt="${q.title}">
+                    </div>
+                    <p class="font-serif-luxury text-lg uppercase tracking-widest">${q.title}</p>
+                  </div>
+                `).join('')}
+              </div>
+            </div>`;
+          }
+          
+          registryCont.innerHTML = html;
         }
 
-        document.querySelectorAll('.dyn-venue-name').forEach(el => el.textContent = data.wedding_venue || "");
-        document.querySelectorAll('.dyn-venue-location').forEach(el => el.textContent = data.city || "");
+        document.querySelectorAll('.dyn-venue-name').forEach(el => el.textContent = data.wedding_address || "");
+        document.querySelectorAll('.dyn-venue-location').forEach(el => el.textContent = data.general_location || "");
         document.querySelectorAll('.dyn-rsvp-link').forEach(el => el.href = data.rsvp_link || "#");
         document.querySelectorAll('.dyn-maps-link').forEach(el => el.href = data.maps_link || "#");
 
@@ -704,11 +758,12 @@ if (!empty($orders)) {
       countdownInterval = setInterval(() => {
         const diff = target - new Date().getTime();
         if (diff < 0) { el.innerHTML = '<div class="text-serif-luxury text-primary text-xl uppercase">The Big Day is Here</div>'; clearInterval(countdownInterval); return; }
-        const d = Math.floor(diff / 86400000), h = Math.floor((diff % 86400000) / 3600000), m = Math.floor((diff % 3600000) / 60000);
+        const d = Math.floor(diff / 86400000), h = Math.floor((diff % 86400000) / 3600000), m = Math.floor((diff % 3600000) / 60000), s = Math.floor((diff % 60000) / 1000);
         el.innerHTML = `
           <div class="text-center"><div class="text-3xl sm:text-5xl font-serif-luxury text-primary">${d}</div><div class="text-[7px] uppercase tracking-widest opacity-40">Days</div></div>
           <div class="text-center"><div class="text-3xl sm:text-5xl font-serif-luxury text-primary">${h}</div><div class="text-[7px] uppercase tracking-widest opacity-40">Hrs</div></div>
-          <div class="text-center"><div class="text-3xl sm:text-5xl font-serif-luxury text-primary">${m}</div><div class="text-[7px] uppercase tracking-widest opacity-40">Min</div></div>`;
+          <div class="text-center"><div class="text-3xl sm:text-5xl font-serif-luxury text-primary">${m}</div><div class="text-[7px] uppercase tracking-widest opacity-40">Min</div></div>
+          <div class="text-center"><div class="text-3xl sm:text-5xl font-serif-luxury text-primary">${s}</div><div class="text-[7px] uppercase tracking-widest opacity-40">Sec</div></div>`;
       }, 1000);
     }
 
